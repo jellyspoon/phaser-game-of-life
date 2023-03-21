@@ -8,9 +8,8 @@ import './style.css'
 //   <div id="game"></div>
 // `;
 
-import 'phaser';
-import { menu } from './menu-scene';
-
+import Phaser from 'phaser'
+import { menu } from './menu-scene'
 
 const GameConfig: Phaser.Types.Core.GameConfig = {
   title: 'ExampleGame',
@@ -40,18 +39,18 @@ const GameConfig: Phaser.Types.Core.GameConfig = {
     // `fullscreenTarget` must be defined for phones to not have
     // a small margin during fullscreen.
     fullscreenTarget: 'app',
-    expandParent: false,
-  },
-};
-
+    expandParent: false
+  }
+}
 
 export class Game extends Phaser.Game {
-  constructor(config: Phaser.Types.Core.GameConfig) {
-    super(config);
+  // eslint-disable-next-line no-useless-constructor
+  constructor (config: Phaser.Types.Core.GameConfig) {
+    super(config)
   }
 }
 
 window.addEventListener('load', () => {
   // Expose `_game` to allow debugging, mute button and fullscreen button
-  (window as any)._game = new Game(GameConfig);
-});
+  (window as any)._game = new Game(GameConfig)
+})
