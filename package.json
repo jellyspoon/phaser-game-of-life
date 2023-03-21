@@ -18,6 +18,7 @@
     "vite": "^4.2.1"
   },
   "dependencies": {
+    "comlink": "^4.4.1",
     "phaser": "^3.55.2"
   }
 }
